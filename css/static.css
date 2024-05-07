@@ -99,6 +99,10 @@ footer {
 
 /* 모바일 화면 크기에 대한 스타일 */
 @media only screen and (max-width: 375px) {
+    .container {
+        padding: 0 10px; /* 모바일에서 좀 더 좁게 */
+    }
+
     nav ul {
         flex-direction: column; /* 모바일에서 세로로 배치 */
         align-items: center; /* 메뉴 아이템을 가운데 정렬 */
@@ -107,5 +111,11 @@ footer {
     nav ul li {
         margin-right: 0; /* 모바일에서 메뉴 간격 조정 해제 */
         margin-bottom: 10px; /* 모바일에서 메뉴 아이템 간의 간격 설정 */
+    }
+
+    .team-members {
+        display: grid; /* 그리드로 변경 */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* 요소들을 자동으로 채워줌 */
+        gap: 10px; /* 그리드 간격 설정 */
     }
 }
