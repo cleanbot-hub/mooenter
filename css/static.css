@@ -35,8 +35,12 @@ nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
+    justify-content: center; /* 메뉴 가로 정렬 */
 }
 
+nav ul li {
+    margin-right: 20px;
+}
 
 nav ul li a {
     color: #333;
@@ -47,15 +51,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #f44336; /* 호버 시 색상 변경 */
 }
-
-
-
-
-nav ul li {
-    margin-right: 20px;
-}
-
-
 
 .about, .team {
     margin-bottom: 40px;
@@ -100,4 +95,17 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+/* 모바일 화면 크기에 대한 스타일 */
+@media only screen and (max-width: 375px) {
+    nav ul {
+        flex-direction: column; /* 모바일에서 세로로 배치 */
+        align-items: center; /* 메뉴 아이템을 가운데 정렬 */
+    }
+
+    nav ul li {
+        margin-right: 0; /* 모바일에서 메뉴 간격 조정 해제 */
+        margin-bottom: 10px; /* 모바일에서 메뉴 아이템 간의 간격 설정 */
+    }
 }
