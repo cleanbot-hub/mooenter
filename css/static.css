@@ -17,8 +17,9 @@ body {
 
 header {
     background-color: #fff;
-    color: #fff;
+    color: #333;
     padding: 10px 0;
+    font-family: Arial, sans-serif; /* 폰트 적용 */
 }
 
 .logo {
@@ -42,10 +43,15 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav ul li:last-child {
+    margin-right: 0;
+}
+
 nav ul li a {
     color: #333;
     text-decoration: none;
     transition: color 0.3s; /* 색상 변화에 대한 트랜지션 */
+    font-family: Arial, sans-serif; /* 폰트 적용 */
 }
 
 nav ul li a:hover {
@@ -58,15 +64,16 @@ nav ul li a:hover {
 }
 
 .team-members {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개씩 */
-    justify-content: center; /* 그리드 내의 요소들 가로 중앙 정렬 */
-    gap: 20px; /* 요소 사이의 간격 설정 */
+    display: flex;
+    flex-wrap: wrap; /* 요소가 넘칠 경우 줄 바꿈 */
+    justify-content: center; /* 가로 중앙 정렬 */
 }
 
 .member {
-    width: 180px; /* 프로필 너비 조정 */
+    width: calc(33.33% - 20px); /* 1줄에 3개씩 나타나도록 너비 설정 */
     text-align: center;
+    margin-bottom: 20px; /* 각 프로필 아래 여백 추가 */
+    font-family: Arial, sans-serif; /* 폰트 적용 */
 }
 
 .member img {
@@ -79,6 +86,7 @@ nav ul li a:hover {
 
 .member h3 {
     margin-bottom: 5px; /* 이름 아래 여백 */
+    font-family: Arial, sans-serif; /* 폰트 적용 */
 }
 
 .member .youtube-link {
@@ -88,6 +96,7 @@ nav ul li a:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-family: Arial, sans-serif; /* 폰트 적용 */
 }
 
 footer {
@@ -95,25 +104,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    font-family: Arial, sans-serif; /* 폰트 적용 */
 }
 
 /* 모바일 화면 크기에 대한 스타일 */
 @media only screen and (max-width: 375px) {
-    .container {
-        padding: 0 10px; /* 모바일에서 좀 더 좁게 */
-    }
-
-    nav ul {
-        flex-direction: column; /* 모바일에서 세로로 배치 */
-        align-items: center; /* 메뉴 아이템을 가운데 정렬 */
-    }
-
-    nav ul li {
-        margin-right: 0; /* 모바일에서 메뉴 간격 조정 해제 */
-        margin-bottom: 10px; /* 모바일에서 메뉴 아이템 간의 간격 설정 */
-    }
-
-    .team-members {
-        grid-template-columns: repeat(2, 1fr); /* 한 줄에 2개씩 */
+    .member {
+        width: 100%; /* 모바일에서 프로필이 한 줄에 표시되도록 전체 너비 설정 */
     }
 }
