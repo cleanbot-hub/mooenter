@@ -37,14 +37,25 @@ nav ul {
     display: flex;
 }
 
-nav ul li {
-    margin-right: 20px;
-}
 
 nav ul li a {
     color: #333;
     text-decoration: none;
+    transition: color 0.3s; /* 색상 변화에 대한 트랜지션 */
 }
+
+nav ul li a:hover {
+    color: #f44336; /* 호버 시 색상 변경 */
+}
+
+
+
+
+nav ul li {
+    margin-right: 20px;
+}
+
+
 
 .about, .team {
     margin-bottom: 40px;
